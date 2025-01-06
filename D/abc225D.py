@@ -19,14 +19,14 @@ for _ in range(Q):
     obj[y]["ahead"] = -1
   else:
     refNo = x
-    while obj[refNo]["behind"] != -1:
-      refNo = obj[refNo]["behind"]
+    while obj[refNo]["ahead"] != -1:
+      refNo = obj[refNo]["ahead"]
     sentouNo = refNo
 
     AnsArr = [1, sentouNo]
     refNo = sentouNo
-    while obj[refNo]["ahead"] != -1:
-      refNo = obj[refNo]["ahead"]
+    while obj[refNo]["behind"] != -1:
+      refNo = obj[refNo]["behind"]
       AnsArr.append(refNo)
       AnsArr[0] += 1
     print(*AnsArr)
