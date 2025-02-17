@@ -10,14 +10,14 @@ for a in A:
   NumExistCntList[a] += 1
 
 for baisu in range(1, NumMAX+1):
-  for n in range(1, NumMAX//baisu):
+  for n in range(1, NumMAX//baisu+1):
     baisuCntList[baisu] += NumExistCntList[n*baisu]
 
 for baisu in range(1, NumMAX+1):
   if baisuCntList[baisu] < K:
     continue
 
-  for n in range(1, NumMAX//baisu):
+  for n in range(1, NumMAX//baisu+1):
     AnsList[n*baisu] = baisu
 
 for a in A:
